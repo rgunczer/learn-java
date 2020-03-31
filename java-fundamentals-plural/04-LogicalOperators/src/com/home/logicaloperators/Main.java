@@ -8,7 +8,7 @@ public class Main {
         int rooms = 0;
 
 //        if (rooms > 0 & students / rooms > 30) { // performs both sides
-         if (rooms > 0 && students / rooms > 30) { // performs both sides
+         if (rooms > 0 && students / rooms > 30) { // performs only what needed from && if rooms === 0 does not perfomr studenstt / rool (divison by zero)
             System.out.println("Crowded!!");
         }
 
