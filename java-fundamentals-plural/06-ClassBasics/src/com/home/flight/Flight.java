@@ -1,7 +1,5 @@
 package com.home.flight;
 
-import org.omg.CORBA.UserException;
-
 public class Flight {
     private int passangers;
     private int seats;
