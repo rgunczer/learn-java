@@ -12,5 +12,8 @@ public class Main {
 
         Passenger jane = new Passenger(2);
         jane.setCheckedBags(3);
+
+        
+        Flight f = new Flight();
     }
 }
