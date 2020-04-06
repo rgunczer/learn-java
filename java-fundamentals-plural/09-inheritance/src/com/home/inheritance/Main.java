@@ -26,6 +26,26 @@ public class Main {
         }
         fieldHiding();
         fieldHiding2();
+        objectReferene();
+    }
+
+    private static void objectReferene() {
+        Object[] stuff = new Object[3];
+        stuff[0] = new Flight();
+        stuff[1] = new Passenger();
+        stuff[2] = new CargoFlight();
+
+        Object o = new Passenger();
+
+        System.out.println(o.getClass());
+        for (int i = 0; i < stuff.length; ++i) {
+            System.out.println(stuff[i].getClass());
+        }
+
+        if  (o instanceof Passenger) {
+            Passenger p = (Passenger)o;
+            p.sayHi();
+        }
     }
 
     private static void fieldHiding2() {
