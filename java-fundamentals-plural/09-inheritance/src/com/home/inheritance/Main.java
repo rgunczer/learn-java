@@ -27,6 +27,33 @@ public class Main {
         fieldHiding();
         fieldHiding2();
         objectReferene();
+        equality();
+    }
+
+    private static void equality() {
+        Flight f1 = new Flight(175);
+        Flight f2 = new Flight(175);
+
+        if (f1 == f2) { // false == does reference comparison
+            System.out.println("equal == [reference]");
+        } else {
+            System.out.println("not equal == [reference]");
+        }
+
+        if (f1.equals(f2)) { // false default implementation does the same as ==
+            System.out.println("equal using .equals");
+        } else {
+            System.out.println("not equal using .equals");
+        }
+
+        Passenger p = new Passenger();
+
+        if (f1.equals(p)) {
+            System.out.println("equal with passenger");
+        } else {
+            System.out.println("not equal with passenger");
+        }
+
     }
 
     private static void objectReferene() {
