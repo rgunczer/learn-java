@@ -20,6 +20,10 @@ public class Flight {
         }
     }
 
+    public int getPassengers() {
+        return passengers;
+    }
+
     private void handleTooMany() {
         System.out.println("Too many!");
     }
@@ -31,6 +35,9 @@ public class Flight {
 
     @Override
     public boolean equals(Object o) {
+        if (super.equals(o)) { // base object implementation compare references
+            return true;
+        }
         if (o instanceof Flight) {
             Flight other = (Flight) o;
             return flightNumber == other.flightNumber;

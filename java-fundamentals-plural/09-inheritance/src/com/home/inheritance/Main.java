@@ -28,6 +28,23 @@ public class Main {
         fieldHiding2();
         objectReferene();
         equality();
+        specialRefSuper();
+        inheritanceAndConstructor();
+    }
+
+    private static void inheritanceAndConstructor() {
+        Flight f175 = new Flight(175);
+        CargoFlight cf = new CargoFlight();
+        CargoFlight cf294 = new CargoFlight(294);
+    }
+
+    private static void specialRefSuper() {
+        Flight f1 = new Flight(175);
+        Flight f2 = f1;
+
+        if (f1.equals(f2)) {
+            System.out.println("equal [super]");
+        }
     }
 
     private static void equality() {
