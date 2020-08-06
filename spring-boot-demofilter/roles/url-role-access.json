@@ -1,0 +1,10 @@
+{
+    "api/users": {
+        "GET" : ["ADMIN", "OBSERVER", "USER"],
+        "POST": [],
+        "PUT" : [],
+        "DELETE": []
+    }
+}
+
+
