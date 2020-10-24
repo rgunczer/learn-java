@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
+    <h1>Dashboardz</h1>
+
+    <p th:text="|Hello there ${user.username}|"></p>
+
+    <form method="post" action="/logout">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <button type="submit">Logout</button>
+    </form>
+    <!-- without CSRF below is enough -->
+    <!-- <a href="/logout">Logout</a> --> 
 </body>
 </html>
